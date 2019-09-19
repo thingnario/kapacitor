@@ -6,8 +6,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/influxdata/kapacitor/services/ec2/client"
-	"github.com/influxdata/kapacitor/services/scraper"
+	"github.com/thingnario/kapacitor/services/ec2/client"
+	"github.com/thingnario/kapacitor/services/scraper"
 	"github.com/prometheus/prometheus/config"
 	pec2 "github.com/prometheus/prometheus/discovery/ec2"
 )

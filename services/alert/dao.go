@@ -9,8 +9,8 @@ import (
 	"regexp"
 	"time"
 
-	"github.com/influxdata/kapacitor/alert"
-	"github.com/influxdata/kapacitor/services/storage"
+	"github.com/thingnario/kapacitor/alert"
+	"github.com/thingnario/kapacitor/services/storage"
 	"github.com/mailru/easyjson/jlexer"
 	"github.com/pkg/errors"
 )

@@ -12,11 +12,11 @@ import (
 	"bytes"
 	"context"
 
-	"github.com/influxdata/kapacitor/edge"
-	"github.com/influxdata/kapacitor/keyvalue"
-	"github.com/influxdata/kapacitor/models"
-	"github.com/influxdata/kapacitor/pipeline"
-	"github.com/influxdata/kapacitor/services/httppost"
+	"github.com/thingnario/kapacitor/edge"
+	"github.com/thingnario/kapacitor/keyvalue"
+	"github.com/thingnario/kapacitor/models"
+	"github.com/thingnario/kapacitor/pipeline"
+	"github.com/thingnario/kapacitor/services/httppost"
 	"github.com/pkg/errors"
 )
 

@@ -8,9 +8,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/influxdata/kapacitor/pipeline"
-	"github.com/influxdata/kapacitor/pipeline/tick"
-	"github.com/influxdata/kapacitor/tick/stateful"
+	"github.com/thingnario/kapacitor/pipeline"
+	"github.com/thingnario/kapacitor/pipeline/tick"
+	"github.com/thingnario/kapacitor/tick/stateful"
 )
 
 // TestPipelineImplemented checks if all nodes in the pipeline package
@@ -19,16 +19,16 @@ import (
 // If you get a test error here, then you need to implement
 // a conversion node from pipeline node to the ast node.
 func TestPipelineImplemented(t *testing.T) {
-	tickPkg, err := importer.For("source", nil).Import("github.com/influxdata/kapacitor/pipeline/tick")
+	tickPkg, err := importer.For("source", nil).Import("github.com/thingnario/kapacitor/pipeline/tick")
 	if err != nil {
-		t.Fatalf("error importing github.com/influxdata/kapacitor/pipeline: %v", err)
+		t.Fatalf("error importing github.com/thingnario/kapacitor/pipeline: %v", err)
 	}
 	// tickScope lists all the types in the tick package
 	tickScope := tickPkg.Scope()
 
-	pipelinePkg, err := importer.For("source", nil).Import("github.com/influxdata/kapacitor/pipeline")
+	pipelinePkg, err := importer.For("source", nil).Import("github.com/thingnario/kapacitor/pipeline")
 	if err != nil {
-		t.Fatalf("error importing github.com/influxdata/kapacitor/pipeline: %v; perhaps kapacitor is not in $GOPATH/src/influxdata/kapacitor?", err)
+		t.Fatalf("error importing github.com/thingnario/kapacitor/pipeline: %v; perhaps kapacitor is not in $GOPATH/src/influxdata/kapacitor?", err)
 	}
 
 	pipelineScope := pipelinePkg.Scope()

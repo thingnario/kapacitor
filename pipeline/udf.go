@@ -9,8 +9,8 @@ import (
 	"time"
 
 	"github.com/influxdata/influxdb/influxql"
-	"github.com/influxdata/kapacitor/tick"
-	"github.com/influxdata/kapacitor/udf/agent"
+	"github.com/thingnario/kapacitor/tick"
+	"github.com/thingnario/kapacitor/udf/agent"
 )
 
 // A UDFNode is a node that can run a User Defined Function (UDF) in a separate process.
@@ -19,7 +19,7 @@ import (
 // The path and arguments to the UDF program are specified in Kapacitor's configuration.
 // Using TICKscripts you can invoke and configure your UDF for each task.
 //
-// See the [README.md](https://github.com/influxdata/kapacitor/tree/master/udf/agent/)
+// See the [README.md](https://github.com/thingnario/kapacitor/tree/master/udf/agent/)
 // for details on how to write your own UDF.
 //
 // UDFs are configured via Kapacitor's main configuration file.

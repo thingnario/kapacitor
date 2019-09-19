@@ -1,6 +1,6 @@
 package edge
 
-import "github.com/influxdata/kapacitor/timer"
+import "github.com/thingnario/kapacitor/timer"
 
 type timedForwardReceiver struct {
 	timer timer.Timer

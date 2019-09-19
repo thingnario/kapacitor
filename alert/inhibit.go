@@ -4,7 +4,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/influxdata/kapacitor/models"
+	"github.com/thingnario/kapacitor/models"
 )
 
 type InhibitorLookup struct {

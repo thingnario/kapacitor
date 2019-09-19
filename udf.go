@@ -9,11 +9,11 @@ import (
 	"time"
 
 	"github.com/cenkalti/backoff"
-	"github.com/influxdata/kapacitor/command"
-	"github.com/influxdata/kapacitor/edge"
-	"github.com/influxdata/kapacitor/pipeline"
-	"github.com/influxdata/kapacitor/udf"
-	"github.com/influxdata/kapacitor/udf/agent"
+	"github.com/thingnario/kapacitor/command"
+	"github.com/thingnario/kapacitor/edge"
+	"github.com/thingnario/kapacitor/pipeline"
+	"github.com/thingnario/kapacitor/udf"
+	"github.com/thingnario/kapacitor/udf/agent"
 	"github.com/pkg/errors"
 )
 

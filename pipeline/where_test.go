@@ -6,7 +6,7 @@ import (
 	"regexp"
 	"testing"
 
-	"github.com/influxdata/kapacitor/tick/ast"
+	"github.com/thingnario/kapacitor/tick/ast"
 )
 
 func TestWhereNode_MarshalJSON(t *testing.T) {

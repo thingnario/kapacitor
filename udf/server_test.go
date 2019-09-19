@@ -7,13 +7,13 @@ import (
 	"testing"
 	"time"
 
-	"github.com/influxdata/kapacitor"
-	"github.com/influxdata/kapacitor/edge"
-	"github.com/influxdata/kapacitor/models"
-	"github.com/influxdata/kapacitor/services/diagnostic"
-	"github.com/influxdata/kapacitor/udf"
-	"github.com/influxdata/kapacitor/udf/agent"
-	udf_test "github.com/influxdata/kapacitor/udf/test"
+	"github.com/thingnario/kapacitor"
+	"github.com/thingnario/kapacitor/edge"
+	"github.com/thingnario/kapacitor/models"
+	"github.com/thingnario/kapacitor/services/diagnostic"
+	"github.com/thingnario/kapacitor/udf"
+	"github.com/thingnario/kapacitor/udf/agent"
+	udf_test "github.com/thingnario/kapacitor/udf/test"
 )
 
 var diagService *diagnostic.Service

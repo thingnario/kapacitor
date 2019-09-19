@@ -18,8 +18,8 @@ import (
 	"github.com/influxdata/influxdb/influxql"
 	"github.com/influxdata/influxdb/models"
 	"github.com/influxdata/influxdb/uuid"
-	"github.com/influxdata/kapacitor/auth"
-	"github.com/influxdata/kapacitor/client/v1"
+	"github.com/thingnario/kapacitor/auth"
+	"github.com/thingnario/kapacitor/client/v1"
 )
 
 // statistics gathered by the httpd package.

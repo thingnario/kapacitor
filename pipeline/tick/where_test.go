@@ -3,8 +3,8 @@ package tick_test
 import (
 	"testing"
 
-	"github.com/influxdata/kapacitor/pipeline"
-	"github.com/influxdata/kapacitor/tick/ast"
+	"github.com/thingnario/kapacitor/pipeline"
+	"github.com/thingnario/kapacitor/tick/ast"
 )
 
 func TestWhere(t *testing.T) {

@@ -10,10 +10,10 @@ import (
 
 	"sync"
 
-	"github.com/influxdata/kapacitor/alert"
-	khttp "github.com/influxdata/kapacitor/http"
-	"github.com/influxdata/kapacitor/keyvalue"
-	"github.com/influxdata/kapacitor/tlsconfig"
+	"github.com/thingnario/kapacitor/alert"
+	khttp "github.com/thingnario/kapacitor/http"
+	"github.com/thingnario/kapacitor/keyvalue"
+	"github.com/thingnario/kapacitor/tlsconfig"
 	"github.com/pkg/errors"
 )
 

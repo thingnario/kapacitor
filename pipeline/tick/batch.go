@@ -1,6 +1,6 @@
 package tick
 
-import "github.com/influxdata/kapacitor/tick/ast"
+import "github.com/thingnario/kapacitor/tick/ast"
 
 // BatchNode converts the batch pipeline node into the TICKScript AST
 type BatchNode struct{}

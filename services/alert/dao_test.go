@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	kalert "github.com/influxdata/kapacitor/alert"
-	"github.com/influxdata/kapacitor/services/alert"
+	kalert "github.com/thingnario/kapacitor/alert"
+	"github.com/thingnario/kapacitor/services/alert"
 )
 
 func BenchmarkTopicState_MarshalBinary(b *testing.B) {

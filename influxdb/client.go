@@ -14,7 +14,7 @@ import (
 	"time"
 
 	imodels "github.com/influxdata/influxdb/models"
-	khttp "github.com/influxdata/kapacitor/http"
+	khttp "github.com/thingnario/kapacitor/http"
 	"github.com/pkg/errors"
 )
 
@@ -540,7 +540,7 @@ func (p Point) Bytes(precision string) []byte {
 	return bytes
 }
 
-// Simple type to create github.com/influxdata/kapacitor/influxdb clients.
+// Simple type to create github.com/thingnario/kapacitor/influxdb clients.
 type ClientCreator struct{}
 
 func (ClientCreator) Create(config Config) (ClientUpdater, error) {

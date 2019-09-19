@@ -1,7 +1,7 @@
 package noauth
 
 import (
-	"github.com/influxdata/kapacitor/auth"
+	"github.com/thingnario/kapacitor/auth"
 )
 
 type Diagnostic interface {

@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/influxdata/influxdb/toml"
-	"github.com/influxdata/kapacitor/services/ec2/client"
+	"github.com/thingnario/kapacitor/services/ec2/client"
 	"github.com/prometheus/common/model"
 	"github.com/prometheus/prometheus/config"
 )

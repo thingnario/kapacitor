@@ -4,10 +4,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/influxdata/kapacitor/alert"
-	"github.com/influxdata/kapacitor/edge"
-	"github.com/influxdata/kapacitor/keyvalue"
-	"github.com/influxdata/kapacitor/models"
+	"github.com/thingnario/kapacitor/alert"
+	"github.com/thingnario/kapacitor/edge"
+	"github.com/thingnario/kapacitor/keyvalue"
+	"github.com/thingnario/kapacitor/models"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/influxdata/kapacitor/edge"
-	"github.com/influxdata/kapacitor/models"
-	"github.com/influxdata/kapacitor/pipeline"
-	"github.com/influxdata/kapacitor/tick/ast"
-	"github.com/influxdata/kapacitor/tick/stateful"
+	"github.com/thingnario/kapacitor/edge"
+	"github.com/thingnario/kapacitor/models"
+	"github.com/thingnario/kapacitor/pipeline"
+	"github.com/thingnario/kapacitor/tick/ast"
+	"github.com/thingnario/kapacitor/tick/stateful"
 )
 
 type CombineNode struct {

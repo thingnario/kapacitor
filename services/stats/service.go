@@ -26,11 +26,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/influxdata/kapacitor"
-	"github.com/influxdata/kapacitor/edge"
-	"github.com/influxdata/kapacitor/models"
-	"github.com/influxdata/kapacitor/server/vars"
-	"github.com/influxdata/kapacitor/timer"
+	"github.com/thingnario/kapacitor"
+	"github.com/thingnario/kapacitor/edge"
+	"github.com/thingnario/kapacitor/models"
+	"github.com/thingnario/kapacitor/server/vars"
+	"github.com/thingnario/kapacitor/timer"
 )
 
 type Diagnostic interface {

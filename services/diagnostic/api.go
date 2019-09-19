@@ -6,8 +6,8 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/influxdata/kapacitor/services/httpd"
-	"github.com/influxdata/kapacitor/uuid"
+	"github.com/thingnario/kapacitor/services/httpd"
+	"github.com/thingnario/kapacitor/uuid"
 )
 
 const (

@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/influxdata/kapacitor/waiter"
+	"github.com/thingnario/kapacitor/waiter"
 )
 
 func TestWaiterGroup_Wait_Broadcast(t *testing.T) {

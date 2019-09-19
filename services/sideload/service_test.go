@@ -7,7 +7,7 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/influxdata/kapacitor/services/sideload"
+	"github.com/thingnario/kapacitor/services/sideload"
 )
 
 func NewService() *sideload.Service {

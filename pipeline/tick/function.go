@@ -3,7 +3,7 @@ package tick
 import (
 	"fmt"
 
-	"github.com/influxdata/kapacitor/tick/ast"
+	"github.com/thingnario/kapacitor/tick/ast"
 )
 
 // Function builds functions from pipeline nodes

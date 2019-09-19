@@ -15,11 +15,11 @@ import (
 
 	"github.com/influxdata/influxdb/influxql"
 	"github.com/influxdata/influxdb/models"
-	influxcli "github.com/influxdata/kapacitor/influxdb"
-	"github.com/influxdata/kapacitor/services/diagnostic"
-	"github.com/influxdata/kapacitor/services/httpd"
-	"github.com/influxdata/kapacitor/services/influxdb"
-	"github.com/influxdata/kapacitor/uuid"
+	influxcli "github.com/thingnario/kapacitor/influxdb"
+	"github.com/thingnario/kapacitor/services/diagnostic"
+	"github.com/thingnario/kapacitor/services/httpd"
+	"github.com/thingnario/kapacitor/services/influxdb"
+	"github.com/thingnario/kapacitor/uuid"
 )
 
 const (

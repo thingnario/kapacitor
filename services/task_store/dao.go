@@ -8,7 +8,7 @@ import (
 	"path"
 	"time"
 
-	"github.com/influxdata/kapacitor/services/storage"
+	"github.com/thingnario/kapacitor/services/storage"
 )
 
 var (

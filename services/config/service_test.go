@@ -11,12 +11,12 @@ import (
 	"testing"
 	"time"
 
-	client "github.com/influxdata/kapacitor/client/v1"
-	"github.com/influxdata/kapacitor/services/config"
-	"github.com/influxdata/kapacitor/services/diagnostic"
-	"github.com/influxdata/kapacitor/services/httpd"
-	"github.com/influxdata/kapacitor/services/httpd/httpdtest"
-	"github.com/influxdata/kapacitor/services/storage/storagetest"
+	client "github.com/thingnario/kapacitor/client/v1"
+	"github.com/thingnario/kapacitor/services/config"
+	"github.com/thingnario/kapacitor/services/diagnostic"
+	"github.com/thingnario/kapacitor/services/httpd"
+	"github.com/thingnario/kapacitor/services/httpd/httpdtest"
+	"github.com/thingnario/kapacitor/services/storage/storagetest"
 )
 
 var diagService *diagnostic.Service

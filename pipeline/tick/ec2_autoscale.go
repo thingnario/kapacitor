@@ -1,8 +1,8 @@
 package tick
 
 import (
-	"github.com/influxdata/kapacitor/pipeline"
-	"github.com/influxdata/kapacitor/tick/ast"
+	"github.com/thingnario/kapacitor/pipeline"
+	"github.com/thingnario/kapacitor/tick/ast"
 )
 
 // Ec2AutoscaleNode converts the ec2 autoscaling pipeline node into the TICKScript AST

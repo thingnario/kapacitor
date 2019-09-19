@@ -13,10 +13,10 @@ import (
 	text "text/template"
 	"time"
 
-	"github.com/influxdata/kapacitor/alert"
-	khttp "github.com/influxdata/kapacitor/http"
-	"github.com/influxdata/kapacitor/keyvalue"
-	"github.com/influxdata/kapacitor/models"
+	"github.com/thingnario/kapacitor/alert"
+	khttp "github.com/thingnario/kapacitor/http"
+	"github.com/thingnario/kapacitor/keyvalue"
+	"github.com/thingnario/kapacitor/models"
 	"github.com/pkg/errors"
 )
 

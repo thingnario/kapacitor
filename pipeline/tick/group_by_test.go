@@ -3,7 +3,7 @@ package tick_test
 import (
 	"testing"
 
-	"github.com/influxdata/kapacitor/tick/ast"
+	"github.com/thingnario/kapacitor/tick/ast"
 )
 
 func TestGroupBy(t *testing.T) {

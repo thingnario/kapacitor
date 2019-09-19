@@ -3,9 +3,9 @@ package kapacitor
 import (
 	"fmt"
 
-	"github.com/influxdata/kapacitor/edge"
-	"github.com/influxdata/kapacitor/tick/ast"
-	"github.com/influxdata/kapacitor/tick/stateful"
+	"github.com/thingnario/kapacitor/edge"
+	"github.com/thingnario/kapacitor/tick/ast"
+	"github.com/thingnario/kapacitor/tick/stateful"
 )
 
 // EvalPredicate - Evaluate a given expression as a boolean predicate against a set of fields and tags

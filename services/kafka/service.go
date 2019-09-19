@@ -12,9 +12,9 @@ import (
 	"text/template"
 	"time"
 
-	"github.com/influxdata/kapacitor/alert"
-	"github.com/influxdata/kapacitor/keyvalue"
-	"github.com/influxdata/kapacitor/server/vars"
+	"github.com/thingnario/kapacitor/alert"
+	"github.com/thingnario/kapacitor/keyvalue"
+	"github.com/thingnario/kapacitor/server/vars"
 	"github.com/pkg/errors"
 	kafka "github.com/segmentio/kafka-go"
 )

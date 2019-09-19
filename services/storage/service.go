@@ -6,7 +6,7 @@ import (
 	"sync"
 
 	"github.com/boltdb/bolt"
-	"github.com/influxdata/kapacitor/services/httpd"
+	"github.com/thingnario/kapacitor/services/httpd"
 	"github.com/pkg/errors"
 )
 

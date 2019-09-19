@@ -11,9 +11,9 @@ import (
 	"strings"
 
 	jsonpatch "github.com/evanphx/json-patch"
-	"github.com/influxdata/kapacitor/alert"
-	client "github.com/influxdata/kapacitor/client/v1"
-	"github.com/influxdata/kapacitor/services/httpd"
+	"github.com/thingnario/kapacitor/alert"
+	client "github.com/thingnario/kapacitor/client/v1"
+	"github.com/thingnario/kapacitor/services/httpd"
 )
 
 const (

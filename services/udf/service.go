@@ -6,9 +6,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/influxdata/kapacitor"
-	"github.com/influxdata/kapacitor/command"
-	"github.com/influxdata/kapacitor/udf"
+	"github.com/thingnario/kapacitor"
+	"github.com/thingnario/kapacitor/command"
+	"github.com/thingnario/kapacitor/udf"
 )
 
 type Diagnostic interface {

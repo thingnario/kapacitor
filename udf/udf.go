@@ -1,8 +1,8 @@
 package udf
 
 import (
-	"github.com/influxdata/kapacitor/edge"
-	"github.com/influxdata/kapacitor/udf/agent"
+	"github.com/thingnario/kapacitor/edge"
+	"github.com/thingnario/kapacitor/udf/agent"
 )
 
 // Interface for communicating with a UDF

@@ -12,13 +12,13 @@ import (
 	"testing"
 	"time"
 
-	"github.com/influxdata/kapacitor"
-	"github.com/influxdata/kapacitor/alert"
-	"github.com/influxdata/kapacitor/clock"
-	"github.com/influxdata/kapacitor/models"
-	alertservice "github.com/influxdata/kapacitor/services/alert"
-	"github.com/influxdata/kapacitor/services/httppost"
-	"github.com/influxdata/kapacitor/services/storage/storagetest"
+	"github.com/thingnario/kapacitor"
+	"github.com/thingnario/kapacitor/alert"
+	"github.com/thingnario/kapacitor/clock"
+	"github.com/thingnario/kapacitor/models"
+	alertservice "github.com/thingnario/kapacitor/services/alert"
+	"github.com/thingnario/kapacitor/services/httppost"
+	"github.com/thingnario/kapacitor/services/storage/storagetest"
 	"github.com/influxdata/wlog"
 )
 

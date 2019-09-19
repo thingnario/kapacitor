@@ -4,10 +4,10 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/influxdata/kapacitor/edge"
-	"github.com/influxdata/kapacitor/pipeline"
-	"github.com/influxdata/kapacitor/tick/ast"
-	"github.com/influxdata/kapacitor/tick/stateful"
+	"github.com/thingnario/kapacitor/edge"
+	"github.com/thingnario/kapacitor/pipeline"
+	"github.com/thingnario/kapacitor/tick/ast"
+	"github.com/thingnario/kapacitor/tick/stateful"
 )
 
 type WhereNode struct {

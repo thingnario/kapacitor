@@ -10,13 +10,13 @@ import (
 	"testing"
 	"time"
 
-	"github.com/influxdata/kapacitor"
-	"github.com/influxdata/kapacitor/alert"
-	"github.com/influxdata/kapacitor/influxdb"
-	"github.com/influxdata/kapacitor/models"
-	"github.com/influxdata/kapacitor/services/httpd"
-	"github.com/influxdata/kapacitor/udf"
-	"github.com/influxdata/kapacitor/uuid"
+	"github.com/thingnario/kapacitor"
+	"github.com/thingnario/kapacitor/alert"
+	"github.com/thingnario/kapacitor/influxdb"
+	"github.com/thingnario/kapacitor/models"
+	"github.com/thingnario/kapacitor/services/httpd"
+	"github.com/thingnario/kapacitor/udf"
+	"github.com/thingnario/kapacitor/uuid"
 )
 
 func newHTTPDService() *httpd.Service {

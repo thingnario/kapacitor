@@ -15,7 +15,7 @@ import (
 
 	"github.com/docker/docker/api/types"
 	"github.com/docker/docker/api/types/swarm"
-	khttp "github.com/influxdata/kapacitor/http"
+	khttp "github.com/thingnario/kapacitor/http"
 	"github.com/pkg/errors"
 )
 

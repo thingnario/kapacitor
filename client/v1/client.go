@@ -17,7 +17,7 @@ import (
 	"time"
 
 	"github.com/influxdata/influxdb/influxql"
-	khttp "github.com/influxdata/kapacitor/http"
+	khttp "github.com/thingnario/kapacitor/http"
 	"github.com/pkg/errors"
 )
 
