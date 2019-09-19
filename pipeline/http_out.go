@@ -25,7 +25,7 @@ import (
 // task that does not exist.
 //
 // Note that the example script above comes from the
-// [scores](https://github.com/influxdata/kapacitor/tree/master/examples/scores) example.
+// [scores](https://github.com/thingnario/kapacitor/tree/master/examples/scores) example.
 // See the complete scores example for a concrete demonstration.
 //
 type HTTPOutNode struct {

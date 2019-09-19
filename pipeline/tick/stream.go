@@ -1,7 +1,7 @@
 package tick
 
 import (
-	"github.com/influxdata/kapacitor/tick/ast"
+	"github.com/thingnario/kapacitor/tick/ast"
 )
 
 // StreamNode converts the stream pipeline node into the TICKScript AST

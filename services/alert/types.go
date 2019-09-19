@@ -1,8 +1,8 @@
 package alert
 
 import (
-	"github.com/influxdata/kapacitor/alert"
-	"github.com/influxdata/kapacitor/models"
+	"github.com/thingnario/kapacitor/alert"
+	"github.com/thingnario/kapacitor/models"
 )
 
 // HandlerSpecRegistrar is responsible for registering and persisting handler spec definitions.

@@ -3,7 +3,7 @@ package ec2
 import (
 	"sync/atomic"
 
-	"github.com/influxdata/kapacitor/services/ec2/client"
+	"github.com/thingnario/kapacitor/services/ec2/client"
 	"github.com/pkg/errors"
 )
 

@@ -12,12 +12,12 @@ import (
 	text "text/template"
 	"time"
 
-	"github.com/influxdata/kapacitor/alert"
-	"github.com/influxdata/kapacitor/bufpool"
-	"github.com/influxdata/kapacitor/command"
-	"github.com/influxdata/kapacitor/keyvalue"
-	"github.com/influxdata/kapacitor/tick/ast"
-	"github.com/influxdata/kapacitor/tick/stateful"
+	"github.com/thingnario/kapacitor/alert"
+	"github.com/thingnario/kapacitor/bufpool"
+	"github.com/thingnario/kapacitor/command"
+	"github.com/thingnario/kapacitor/keyvalue"
+	"github.com/thingnario/kapacitor/tick/ast"
+	"github.com/thingnario/kapacitor/tick/stateful"
 	"github.com/pkg/errors"
 )
 

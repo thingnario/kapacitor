@@ -11,8 +11,8 @@ import (
 	"sync"
 
 	"github.com/ghodss/yaml"
-	"github.com/influxdata/kapacitor/keyvalue"
-	"github.com/influxdata/kapacitor/services/httpd"
+	"github.com/thingnario/kapacitor/keyvalue"
+	"github.com/thingnario/kapacitor/services/httpd"
 	"github.com/pkg/errors"
 )
 

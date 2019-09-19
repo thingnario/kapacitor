@@ -13,10 +13,10 @@ import (
 
 	"github.com/ghodss/yaml"
 
-	"github.com/influxdata/kapacitor/client/v1"
-	kexpvar "github.com/influxdata/kapacitor/expvar"
-	"github.com/influxdata/kapacitor/server/vars"
-	"github.com/influxdata/kapacitor/services/storage"
+	"github.com/thingnario/kapacitor/client/v1"
+	kexpvar "github.com/thingnario/kapacitor/expvar"
+	"github.com/thingnario/kapacitor/server/vars"
+	"github.com/thingnario/kapacitor/services/storage"
 	"github.com/pkg/errors"
 )
 

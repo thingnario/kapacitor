@@ -9,7 +9,7 @@ import (
 	"text/template"
 	"time"
 
-	"github.com/influxdata/kapacitor/cmd/kapacitord/run"
+	"github.com/thingnario/kapacitor/cmd/kapacitord/run"
 )
 
 func TestCommand_PIDFile(t *testing.T) {

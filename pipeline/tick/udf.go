@@ -3,9 +3,9 @@ package tick
 import (
 	"time"
 
-	"github.com/influxdata/kapacitor/pipeline"
-	"github.com/influxdata/kapacitor/tick/ast"
-	"github.com/influxdata/kapacitor/udf/agent"
+	"github.com/thingnario/kapacitor/pipeline"
+	"github.com/thingnario/kapacitor/tick/ast"
+	"github.com/thingnario/kapacitor/udf/agent"
 )
 
 // UDFNode converts the UDF pipeline node into the TICKScript AST

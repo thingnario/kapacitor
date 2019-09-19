@@ -9,14 +9,14 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/influxdata/kapacitor/alert"
-	"github.com/influxdata/kapacitor/edge"
-	kexpvar "github.com/influxdata/kapacitor/expvar"
-	"github.com/influxdata/kapacitor/keyvalue"
-	"github.com/influxdata/kapacitor/models"
-	"github.com/influxdata/kapacitor/pipeline"
-	"github.com/influxdata/kapacitor/server/vars"
-	"github.com/influxdata/kapacitor/timer"
+	"github.com/thingnario/kapacitor/alert"
+	"github.com/thingnario/kapacitor/edge"
+	kexpvar "github.com/thingnario/kapacitor/expvar"
+	"github.com/thingnario/kapacitor/keyvalue"
+	"github.com/thingnario/kapacitor/models"
+	"github.com/thingnario/kapacitor/pipeline"
+	"github.com/thingnario/kapacitor/server/vars"
+	"github.com/thingnario/kapacitor/timer"
 	"github.com/pkg/errors"
 )
 

@@ -6,11 +6,11 @@ import (
 	"time"
 
 	"github.com/influxdata/influxdb/influxql"
-	"github.com/influxdata/kapacitor/edge"
-	"github.com/influxdata/kapacitor/expvar"
-	"github.com/influxdata/kapacitor/influxdb"
-	"github.com/influxdata/kapacitor/keyvalue"
-	"github.com/influxdata/kapacitor/pipeline"
+	"github.com/thingnario/kapacitor/edge"
+	"github.com/thingnario/kapacitor/expvar"
+	"github.com/thingnario/kapacitor/influxdb"
+	"github.com/thingnario/kapacitor/keyvalue"
+	"github.com/thingnario/kapacitor/pipeline"
 	"github.com/pkg/errors"
 )
 

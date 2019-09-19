@@ -9,10 +9,10 @@ import (
 	"strings"
 	"time"
 
-	client "github.com/influxdata/kapacitor/client/v1"
-	"github.com/influxdata/kapacitor/services/config/override"
-	"github.com/influxdata/kapacitor/services/httpd"
-	"github.com/influxdata/kapacitor/services/storage"
+	client "github.com/thingnario/kapacitor/client/v1"
+	"github.com/thingnario/kapacitor/services/config/override"
+	"github.com/thingnario/kapacitor/services/httpd"
+	"github.com/thingnario/kapacitor/services/storage"
 	"github.com/pkg/errors"
 )
 

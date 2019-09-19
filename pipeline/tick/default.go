@@ -3,8 +3,8 @@ package tick
 import (
 	"sort"
 
-	"github.com/influxdata/kapacitor/pipeline"
-	"github.com/influxdata/kapacitor/tick/ast"
+	"github.com/thingnario/kapacitor/pipeline"
+	"github.com/thingnario/kapacitor/tick/ast"
 )
 
 // DefaultNode converts the Default pipeline node into the TICKScript AST

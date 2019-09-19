@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/influxdata/kapacitor/tick/ast"
+	"github.com/thingnario/kapacitor/tick/ast"
 )
 
 // The WhereNode filters the data stream by a given expression.

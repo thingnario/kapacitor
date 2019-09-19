@@ -6,12 +6,12 @@ import (
 	"text/template"
 	text "text/template"
 
-	"github.com/influxdata/kapacitor/bufpool"
-	"github.com/influxdata/kapacitor/edge"
-	"github.com/influxdata/kapacitor/keyvalue"
-	"github.com/influxdata/kapacitor/models"
-	"github.com/influxdata/kapacitor/pipeline"
-	"github.com/influxdata/kapacitor/services/sideload"
+	"github.com/thingnario/kapacitor/bufpool"
+	"github.com/thingnario/kapacitor/edge"
+	"github.com/thingnario/kapacitor/keyvalue"
+	"github.com/thingnario/kapacitor/models"
+	"github.com/thingnario/kapacitor/pipeline"
+	"github.com/thingnario/kapacitor/services/sideload"
 	"github.com/pkg/errors"
 )
 

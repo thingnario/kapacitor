@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/influxdata/kapacitor/tick/ast"
+	"github.com/thingnario/kapacitor/tick/ast"
 	"github.com/pkg/errors"
 )
 

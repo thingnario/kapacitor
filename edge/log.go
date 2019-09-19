@@ -3,7 +3,7 @@
 package edge
 
 import (
-	"github.com/influxdata/kapacitor/pipeline"
+	"github.com/thingnario/kapacitor/pipeline"
 )
 
 type Diagnostic interface {

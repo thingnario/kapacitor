@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/influxdata/kapacitor/pipeline"
+	"github.com/thingnario/kapacitor/pipeline"
 )
 
 func TestJoin(t *testing.T) {

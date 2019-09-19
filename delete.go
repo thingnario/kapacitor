@@ -1,10 +1,10 @@
 package kapacitor
 
 import (
-	"github.com/influxdata/kapacitor/edge"
-	"github.com/influxdata/kapacitor/expvar"
-	"github.com/influxdata/kapacitor/models"
-	"github.com/influxdata/kapacitor/pipeline"
+	"github.com/thingnario/kapacitor/edge"
+	"github.com/thingnario/kapacitor/expvar"
+	"github.com/thingnario/kapacitor/models"
+	"github.com/thingnario/kapacitor/pipeline"
 )
 
 const (

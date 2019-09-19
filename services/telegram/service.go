@@ -13,8 +13,8 @@ import (
 
 	"strings"
 
-	"github.com/influxdata/kapacitor/alert"
-	"github.com/influxdata/kapacitor/keyvalue"
+	"github.com/thingnario/kapacitor/alert"
+	"github.com/thingnario/kapacitor/keyvalue"
 	"github.com/pkg/errors"
 )
 

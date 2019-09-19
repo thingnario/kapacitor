@@ -9,8 +9,8 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
-	"github.com/influxdata/kapacitor/tick/stateful"
-	"github.com/influxdata/kapacitor/udf/agent"
+	"github.com/thingnario/kapacitor/tick/stateful"
+	"github.com/thingnario/kapacitor/udf/agent"
 )
 
 func TestPipeline_MarshalJSON(t *testing.T) {

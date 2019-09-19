@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/influxdata/influxdb/influxql"
-	"github.com/influxdata/kapacitor/tick/ast"
+	"github.com/thingnario/kapacitor/tick/ast"
 )
 
 // Compute the duration of a given state.

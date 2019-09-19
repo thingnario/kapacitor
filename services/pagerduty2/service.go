@@ -12,9 +12,9 @@ import (
 	text "text/template"
 	"time"
 
-	"github.com/influxdata/kapacitor/alert"
-	"github.com/influxdata/kapacitor/keyvalue"
-	"github.com/influxdata/kapacitor/models"
+	"github.com/thingnario/kapacitor/alert"
+	"github.com/thingnario/kapacitor/keyvalue"
+	"github.com/thingnario/kapacitor/models"
 )
 
 // This example shows how to send a trigger event without a dedup_key.

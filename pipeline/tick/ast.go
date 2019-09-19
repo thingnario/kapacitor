@@ -3,8 +3,8 @@ package tick
 import (
 	"fmt"
 
-	"github.com/influxdata/kapacitor/pipeline"
-	"github.com/influxdata/kapacitor/tick/ast"
+	"github.com/thingnario/kapacitor/pipeline"
+	"github.com/thingnario/kapacitor/tick/ast"
 )
 
 // AST converts a pipeline into an AST

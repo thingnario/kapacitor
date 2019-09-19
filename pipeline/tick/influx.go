@@ -3,8 +3,8 @@ package tick
 import (
 	"strings"
 
-	"github.com/influxdata/kapacitor/pipeline"
-	"github.com/influxdata/kapacitor/tick/ast"
+	"github.com/thingnario/kapacitor/pipeline"
+	"github.com/thingnario/kapacitor/tick/ast"
 )
 
 // InfluxQLNode converts the InfluxQLNode pipeline node into the TICKScript AST

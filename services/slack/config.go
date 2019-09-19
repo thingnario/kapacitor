@@ -3,7 +3,7 @@ package slack
 import (
 	"net/url"
 
-	"github.com/influxdata/kapacitor/listmap"
+	"github.com/thingnario/kapacitor/listmap"
 	"github.com/pkg/errors"
 )
 

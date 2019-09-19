@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/influxdata/kapacitor/tick/ast"
-	"github.com/influxdata/kapacitor/tick/stateful"
+	"github.com/thingnario/kapacitor/tick/ast"
+	"github.com/thingnario/kapacitor/tick/stateful"
 )
 
 type keyStruct struct {

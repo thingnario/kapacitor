@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/influxdata/influxdb/toml"
-	"github.com/influxdata/kapacitor/tlsconfig"
+	"github.com/thingnario/kapacitor/tlsconfig"
 	"github.com/pkg/errors"
 	kafka "github.com/segmentio/kafka-go"
 )

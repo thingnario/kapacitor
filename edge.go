@@ -4,10 +4,10 @@ import (
 	"errors"
 	"sync"
 
-	"github.com/influxdata/kapacitor/edge"
-	"github.com/influxdata/kapacitor/expvar"
-	"github.com/influxdata/kapacitor/pipeline"
-	"github.com/influxdata/kapacitor/server/vars"
+	"github.com/thingnario/kapacitor/edge"
+	"github.com/thingnario/kapacitor/expvar"
+	"github.com/thingnario/kapacitor/pipeline"
+	"github.com/thingnario/kapacitor/server/vars"
 )
 
 const (

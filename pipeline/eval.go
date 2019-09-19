@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/influxdata/kapacitor/tick/ast"
+	"github.com/thingnario/kapacitor/tick/ast"
 )
 
 // Evaluates expressions on each data point it receives.

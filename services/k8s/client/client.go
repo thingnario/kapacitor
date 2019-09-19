@@ -15,7 +15,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	khttp "github.com/influxdata/kapacitor/http"
+	khttp "github.com/thingnario/kapacitor/http"
 	"github.com/pkg/errors"
 )
 

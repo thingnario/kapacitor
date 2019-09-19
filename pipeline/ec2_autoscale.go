@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/influxdata/kapacitor/tick/ast"
+	"github.com/thingnario/kapacitor/tick/ast"
 )
 
 // EC2AutoscaleNode triggers autoscale events for a group on a AWS Autoscaling group.

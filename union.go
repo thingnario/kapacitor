@@ -3,8 +3,8 @@ package kapacitor
 import (
 	"time"
 
-	"github.com/influxdata/kapacitor/edge"
-	"github.com/influxdata/kapacitor/pipeline"
+	"github.com/thingnario/kapacitor/edge"
+	"github.com/thingnario/kapacitor/pipeline"
 )
 
 type UnionNode struct {

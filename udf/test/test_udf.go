@@ -5,10 +5,10 @@ import (
 	"io"
 	"io/ioutil"
 
-	"github.com/influxdata/kapacitor"
-	"github.com/influxdata/kapacitor/services/diagnostic"
-	"github.com/influxdata/kapacitor/udf"
-	"github.com/influxdata/kapacitor/udf/agent"
+	"github.com/thingnario/kapacitor"
+	"github.com/thingnario/kapacitor/services/diagnostic"
+	"github.com/thingnario/kapacitor/udf"
+	"github.com/thingnario/kapacitor/udf/agent"
 )
 
 var diagService *diagnostic.Service

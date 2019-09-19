@@ -17,11 +17,11 @@ import (
 	"time"
 
 	iclient "github.com/influxdata/influxdb/client/v2"
-	"github.com/influxdata/kapacitor/client/v1"
-	"github.com/influxdata/kapacitor/server"
-	"github.com/influxdata/kapacitor/services/diagnostic"
-	"github.com/influxdata/kapacitor/services/mqtt"
-	"github.com/influxdata/kapacitor/services/slack"
+	"github.com/thingnario/kapacitor/client/v1"
+	"github.com/thingnario/kapacitor/server"
+	"github.com/thingnario/kapacitor/services/diagnostic"
+	"github.com/thingnario/kapacitor/services/mqtt"
+	"github.com/thingnario/kapacitor/services/slack"
 	"github.com/influxdata/wlog"
 )
 

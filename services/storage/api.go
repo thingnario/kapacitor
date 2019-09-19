@@ -9,8 +9,8 @@ import (
 	"strings"
 
 	"github.com/boltdb/bolt"
-	client "github.com/influxdata/kapacitor/client/v1"
-	"github.com/influxdata/kapacitor/services/httpd"
+	client "github.com/thingnario/kapacitor/client/v1"
+	"github.com/thingnario/kapacitor/services/httpd"
 )
 
 const (

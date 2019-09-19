@@ -3,8 +3,8 @@ package tick_test
 import (
 	"testing"
 
-	"github.com/influxdata/kapacitor/pipeline"
-	"github.com/influxdata/kapacitor/udf/agent"
+	"github.com/thingnario/kapacitor/pipeline"
+	"github.com/thingnario/kapacitor/udf/agent"
 )
 
 func TestUDF(t *testing.T) {

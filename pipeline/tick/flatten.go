@@ -1,8 +1,8 @@
 package tick
 
 import (
-	"github.com/influxdata/kapacitor/pipeline"
-	"github.com/influxdata/kapacitor/tick/ast"
+	"github.com/thingnario/kapacitor/pipeline"
+	"github.com/thingnario/kapacitor/tick/ast"
 )
 
 // FlattenNode converts the FlattenNode pipeline node into the TICKScript AST

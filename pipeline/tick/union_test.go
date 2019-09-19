@@ -3,7 +3,7 @@ package tick_test
 import (
 	"testing"
 
-	"github.com/influxdata/kapacitor/pipeline"
+	"github.com/thingnario/kapacitor/pipeline"
 )
 
 func TestUnion(t *testing.T) {

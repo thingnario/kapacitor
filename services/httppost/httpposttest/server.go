@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"net/http/httptest"
 
-	"github.com/influxdata/kapacitor/alert"
+	"github.com/thingnario/kapacitor/alert"
 )
 
 type AlertServer struct {
