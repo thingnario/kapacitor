@@ -116,6 +116,9 @@ func (n *ChangeDetectNode) changeDetect(prev, curr models.Fields) bool {
 				keyvalue.KV("field", field))
 			continue
 		}
+		if prev[field] == nil {
+			continue
+		}
 		if prev[field] != value {
 			return true
 		}
