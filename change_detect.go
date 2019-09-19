@@ -92,6 +92,9 @@ func (g *changeDetectGroup) doChangeDetect(p edge.FieldsTagsTimeGetter) bool {
 	changed := g.n.changeDetect(prevFields, currFields)
 
 	if !changed {
+		if g.previous == nil {
+			g.previous = p
+		}
 		return false
 	}
 	g.previous = p
