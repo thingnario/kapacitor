@@ -1,8 +1,11 @@
 package kapacitor
 
 import (
+	"encoding/json"
 	"fmt"
+	"sync"
 
+	"github.com/go-redis/redis"
 	"github.com/thingnario/kapacitor/edge"
 	"github.com/thingnario/kapacitor/keyvalue"
 	"github.com/thingnario/kapacitor/models"
@@ -74,8 +77,18 @@ func (g *changeDetectGroup) EndBatch(end edge.EndBatchMessage) (edge.Message, er
 }
 
 func (g *changeDetectGroup) Point(p edge.PointMessage) (edge.Message, error) {
+	if g.previous == nil {
+		g.previous = p.ShallowCopy()
+		key := fmt.Sprintf("changeDetectNode:%s:%s", g.n.et.Task.ID, p.GroupID())
+		err := WriteToRedis(key, g.previous.Fields())
+		if err != nil {
+			fmt.Println("Oops!")
+		}
+	}
 	changed := g.doChangeDetect(p)
 	if changed {
+		key := fmt.Sprintf("changeDetectNode:%s:%s", g.n.et.Task.ID, p.GroupID())
+		WriteToRedis(key, p.Fields())
 		return p, nil
 	}
 	return nil, nil
@@ -92,9 +105,6 @@ func (g *changeDetectGroup) doChangeDetect(p edge.FieldsTagsTimeGetter) bool {
 	changed := g.n.changeDetect(prevFields, currFields)
 
 	if !changed {
-		if g.previous == nil {
-			g.previous = p
-		}
 		return false
 	}
 	g.previous = p
@@ -127,4 +137,27 @@ func (n *ChangeDetectNode) changeDetect(prev, curr models.Fields) bool {
 		}
 	}
 	return false
+}
+
+func WriteToRedis(key string, value map[string]interface{}) error {
+	b, err := json.Marshal(value)
+	if err != nil {
+		return err
+	}
+	client := GetRedisInstance()
+	return client.Set(key, b, 0).Err()
+}
+
+var redisClientInstance *redis.Client
+var once sync.Once
+
+func GetRedisInstance() *redis.Client {
+	once.Do(func() {
+		redisClientInstance = redis.NewClient(&redis.Options{
+			Addr:     "localhost:6379",
+			Password: "", // no password set
+			DB:       0,  // use default DB
+		})
+	})
+	return redisClientInstance
 }
