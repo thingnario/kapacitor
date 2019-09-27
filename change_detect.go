@@ -78,11 +78,20 @@ func (g *changeDetectGroup) EndBatch(end edge.EndBatchMessage) (edge.Message, er
 
 func (g *changeDetectGroup) Point(p edge.PointMessage) (edge.Message, error) {
 	if g.previous == nil {
-		g.previous = p.ShallowCopy()
+		previous := p.ShallowCopy()
+		g.previous = previous
 		key := fmt.Sprintf("changeDetectNode:%s:%s", g.n.et.Task.ID, p.GroupID())
-		err := WriteToRedis(key, g.previous.Fields())
+		stored, err := ReadFromRedis(key)
 		if err != nil {
-			fmt.Println("Oops!")
+			return nil, err
+		}
+		if stored != nil {
+			previous.SetFields(stored)
+		} else {
+			err = WriteToRedis(key, g.previous.Fields())
+			if err != nil {
+				return nil, err
+			}
 		}
 	}
 	changed := g.doChangeDetect(p)
@@ -146,6 +155,20 @@ func WriteToRedis(key string, value map[string]interface{}) error {
 	}
 	client := GetRedisInstance()
 	return client.Set(key, b, 0).Err()
+}
+
+func ReadFromRedis(key string) (map[string]interface{}, error) {
+	client := GetRedisInstance()
+	val, err := client.Get(key).Result()
+	if err != nil {
+		return nil, err
+	}
+	var result map[string]interface{}
+	err = json.Unmarshal([]byte(val), &result)
+	if err != nil {
+		return nil, err
+	}
+	return result, nil
 }
 
 var redisClientInstance *redis.Client
