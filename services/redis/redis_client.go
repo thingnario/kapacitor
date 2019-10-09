@@ -2,6 +2,7 @@ package redis
 
 import (
 	"encoding/json"
+	"os"
 	"reflect"
 	"sync"
 
@@ -58,8 +59,12 @@ var once sync.Once
 
 func GetRedisInstance() *redis.Client {
 	once.Do(func() {
+		addr, exists := os.LookupEnv("REDIS_ADDR")
+		if !exists {
+			addr = "localhost:6379"
+		}
 		redisClientInstance = redis.NewClient(&redis.Options{
-			Addr:     "localhost:6379",
+			Addr:     addr,
 			Password: "", // no password set
 			DB:       0,  // use default DB
 		})
