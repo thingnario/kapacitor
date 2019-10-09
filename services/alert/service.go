@@ -7,7 +7,9 @@ import (
 	"path"
 	"reflect"
 	"regexp"
+	"strings"
 	"sync"
+	"time"
 
 	"github.com/thingnario/kapacitor/alert"
 	"github.com/thingnario/kapacitor/command"
@@ -24,6 +26,7 @@ import (
 	"github.com/thingnario/kapacitor/services/pagerduty"
 	"github.com/thingnario/kapacitor/services/pagerduty2"
 	"github.com/thingnario/kapacitor/services/pushover"
+	"github.com/thingnario/kapacitor/services/redis"
 	"github.com/thingnario/kapacitor/services/sensu"
 	"github.com/thingnario/kapacitor/services/slack"
 	"github.com/thingnario/kapacitor/services/smtp"
@@ -407,6 +410,37 @@ func (s *Service) loadSavedTopicStates() error {
 			s.topics.RestoreTopic(ts.Topic, s.convertEventStatesToAlert(ts.EventStates))
 		}
 
+		stored, err := redis.ReadAllFromRedis(fmt.Sprint("topics|*"))
+		if stored != nil {
+			topics := make(map[string]map[string]alert.EventState)
+			for k, v := range stored {
+				pos := strings.Index(k, "|")
+				topic := k[0:pos]
+				id := k[pos+1:]
+				if topics[topic] == nil {
+					topics[topic] = make(map[string]alert.EventState)
+				}
+				message := v["Message"].String()
+				details := v["Details"].String()
+				timeStr := v["Time"].String()
+				var t time.Time
+				t.UnmarshalText([]byte(timeStr))
+				duration := time.Duration(v["Duration"].Float())
+				level := alert.Level(v["Level"].Float())
+				state := EventState{
+					message,
+					details,
+					t,
+					duration,
+					level,
+				}
+				topics[topic][id] = s.convertEventStateToAlert(id, state)
+			}
+			for topic, eventStates := range topics {
+				s.topics.RestoreTopic(topic, eventStates)
+			}
+		}
+
 		offset += limit
 		if len(topicStates) != limit {
 			break
@@ -438,6 +472,17 @@ func (s *Service) Collect(event alert.Event) error {
 			return err
 		}
 	}
+
+	key := fmt.Sprintf("topics|%s|%s", event.Topic, event.State.ID)
+	value := make(map[string]interface{})
+	value["ID"] = event.State.ID
+	value["Message"] = event.State.Message
+	value["Details"] = event.State.Details
+	timebytes, _ := event.State.Time.MarshalText()
+	value["Time"] = string(timebytes)
+	value["Duration"] = int64(event.State.Duration)
+	value["Level"] = int64(event.State.Level)
+	redis.WriteToRedis(key, value)
 
 	err := s.topics.Collect(event)
 	if err != nil {
