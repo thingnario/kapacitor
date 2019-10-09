@@ -2,6 +2,7 @@ package redis
 
 import (
 	"encoding/json"
+	"reflect"
 	"sync"
 
 	"github.com/go-redis/redis"
@@ -28,6 +29,28 @@ func ReadFromRedis(key string) (map[string]interface{}, error) {
 		return nil, err
 	}
 	return result, nil
+}
+
+func ReadAllFromRedis(key_wildcard string) (map[string]map[string]reflect.Value, error) {
+	client := GetRedisInstance()
+	results := make(map[string]map[string]reflect.Value)
+	keys, err := client.Keys(key_wildcard).Result()
+	if err != nil {
+		return nil, err
+	}
+	for _, key := range keys {
+		keylen := len(key_wildcard) - 1
+		subkey := key[keylen:]
+		response, err := ReadFromRedis(key)
+		if err != nil {
+			return nil, err
+		}
+		results[subkey] = make(map[string]reflect.Value)
+		for k, v := range response {
+			results[subkey][k] = reflect.ValueOf(v)
+		}
+	}
+	return results, nil
 }
 
 var redisClientInstance *redis.Client
