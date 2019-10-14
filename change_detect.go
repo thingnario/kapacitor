@@ -80,9 +80,6 @@ func (g *changeDetectGroup) Point(p edge.PointMessage) (edge.Message, error) {
 		g.previous = previous
 		key := fmt.Sprintf("changeDetectNode:%s:%s", g.n.et.Task.ID, p.GroupID())
 		stored, err := redis.ReadFromRedis(key)
-		if err != nil {
-			return nil, err
-		}
 		if stored != nil {
 			previous.SetFields(stored)
 		} else {
