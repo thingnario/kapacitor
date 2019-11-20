@@ -26,6 +26,7 @@ import (
 	"github.com/thingnario/kapacitor/services/pagerduty"
 	"github.com/thingnario/kapacitor/services/pagerduty2"
 	"github.com/thingnario/kapacitor/services/pushover"
+	"github.com/thingnario/kapacitor/services/redis"
 	"github.com/thingnario/kapacitor/services/sensu"
 	"github.com/thingnario/kapacitor/services/slack"
 	"github.com/thingnario/kapacitor/services/smtp"
@@ -610,6 +611,11 @@ func (n *AlertNode) NewGroup(group edge.GroupInfo, first edge.PointMeta) (edge.R
 
 func (n *AlertNode) restoreEventState(id string, t time.Time, tags models.Tags) *alertState {
 	state := n.newAlertState(tags)
+	key := fmt.Sprintf("topics|%s|%s", n.anonTopic, id)
+	exists, _ := redis.KeyExists(key)
+	if exists {
+		state.initialized = true
+	}
 	currentLevel, triggered := n.restoreEvent(id)
 	if currentLevel != alert.OK {
 		// Add initial event
@@ -827,6 +833,7 @@ type alertState struct {
 	// Note: Alerts are not triggered for every event.
 	lastTriggered time.Time
 	expired       bool
+	initialized   bool
 
 	inhibitors []*alert.Inhibitor
 }
@@ -1055,7 +1062,8 @@ func (a *alertState) triggered(t time.Time) {
 // Record an event in the alert history.
 func (a *alertState) addEvent(t time.Time, level alert.Level) {
 	// Check for changes
-	a.changed = a.history[a.idx] != level
+	a.changed = a.history[a.idx] != level || !a.initialized
+	a.initialized = true
 
 	// Add event to history
 	a.idx = (a.idx + 1) % len(a.history)
