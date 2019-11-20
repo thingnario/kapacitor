@@ -54,6 +54,15 @@ func ReadAllFromRedis(key_wildcard string) (map[string]map[string]reflect.Value,
 	return results, nil
 }
 
+func KeyExists(key string) (bool, error) {
+	client := GetRedisInstance()
+	response, err := client.Exists(key).Result()
+	if err != nil {
+		return false, err
+	}
+	return (response > 0), nil
+}
+
 var redisClientInstance *redis.Client
 var once sync.Once
 
